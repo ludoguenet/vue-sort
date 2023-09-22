@@ -16,8 +16,15 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('products.index', [
-            'products' => Product::with('category')->orderBy(Category::select('name')->whereColumn('categories.id', 'products.category_id'))->get(),
-        ]);
+//        $products = Product::with('category')
+//            ->when(
+//                $request->category,
+//                fn ($query) => $query->orderBy(
+//                    Category::select('name')->whereColumn('categories.id', 'products.category_id'),
+//                ),
+//            )
+//            ->get();
+
+        return view('products.index');
     }
 }

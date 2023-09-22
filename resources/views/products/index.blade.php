@@ -1,3 +1,5 @@
-@foreach($products as $product)
-    {{ $product->name }} - <strong>{{ $product->category->name }}</strong>
-@endforeach
+@extends('welcome')
+
+@section('content')
+    <product-index />
+@endsection
