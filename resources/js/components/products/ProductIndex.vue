@@ -4,6 +4,7 @@
             <nav class="flex space-x-4" aria-label="Tabs">
                 <a
                     class="text-gray-500 hover:text-gray-700 rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
+                    :class="{'text-indigo-500': orderBy === 'name'}"
                     v-on:click="toggleOrder('name')"
                 >
                     Trier par nom
@@ -11,6 +12,7 @@
 
                 <a
                     class="text-gray-500 hover:text-gray-700 rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
+                     :class="{'text-indigo-500': orderBy === 'price'}"
                     v-on:click="toggleOrder('price')"
                 >
                     Trier par prix
@@ -18,6 +20,7 @@
 
                 <a
                     class="text-gray-500 hover:text-gray-700 rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
+                     :class="{'text-indigo-500': orderBy === 'category'}"
                     v-on:click="toggleOrder('category')"
                 >
                     Trier par catégorie
@@ -39,6 +42,7 @@ const {
     products,
     getProducts,
     toggleOrder,
+    orderBy,
 } = useProducts();
 
 onMounted(async () => {

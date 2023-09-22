@@ -34,5 +34,6 @@ export function useProducts () {
         products,
         getProducts,
         toggleOrder,
+        orderBy,
     }
 }
