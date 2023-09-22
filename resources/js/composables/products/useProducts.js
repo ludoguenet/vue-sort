@@ -3,7 +3,7 @@ import {ref} from "vue";
 export function useProducts () {
     const products = ref([]);
     const orderBy = ref(null);
-    const direction = ref('asc');
+    const direction = ref('desc');
 
     const getProducts = async () => {
         try {

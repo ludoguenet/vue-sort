@@ -1,21 +1,30 @@
 <template>
-    <button
-        v-on:click="toggleOrder('name')"
-    >
-        Trier par nom
-    </button>
+    <div class="my-5">
+        <div class="hidden sm:block">
+            <nav class="flex space-x-4" aria-label="Tabs">
+                <a
+                    class="text-gray-500 hover:text-gray-700 rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
+                    v-on:click="toggleOrder('name')"
+                >
+                    Trier par nom
+                </a>
 
-    <button
-        v-on:click="toggleOrder('price')"
-    >
-        Trier par prix
-    </button>
+                <a
+                    class="text-gray-500 hover:text-gray-700 rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
+                    v-on:click="toggleOrder('price')"
+                >
+                    Trier par prix
+                </a>
 
-    <button
-        v-on:click="toggleOrder('category')"
-    >
-        Trier par catégorie
-    </button>
+                <a
+                    class="text-gray-500 hover:text-gray-700 rounded-md px-3 py-2 text-sm font-medium cursor-pointer"
+                    v-on:click="toggleOrder('category')"
+                >
+                    Trier par catégorie
+                </a>
+            </nav>
+        </div>
+    </div>
 
     <product-list
         :products="products"
