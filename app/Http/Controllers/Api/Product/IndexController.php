@@ -26,6 +26,8 @@ final class IndexController
             )
             ->get();
 
+        // let { data } = await ...
+        // { data : { products : [ {}, {} ] } }
 
         return response()->json([
             'products' => $products,
