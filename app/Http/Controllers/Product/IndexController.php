@@ -8,23 +8,12 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
-class IndexController extends Controller
+final class IndexController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
-    public function __invoke(Request $request)
+    public function __invoke(): View
     {
-//        $products = Product::with('category')
-//            ->when(
-//                $request->category,
-//                fn ($query) => $query->orderBy(
-//                    Category::select('name')->whereColumn('categories.id', 'products.category_id'),
-//                ),
-//            )
-//            ->get();
-
         return view('products.index');
     }
 }
